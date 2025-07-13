@@ -1,12 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV#2</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CV#3</title>
 </head>
 <body>
-    <h1>Камон эврибади, Путч йор хендзап</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat aut soluta repellendus eligendi deserunt blanditiis temporibus ea eum tempore illum, corrupti quas aliquid commodi dolores quia rerum quam esse. Odit!</p>
+    <header class="header">
+        <div class="header_content">
+                <nav class="header_nav">
+                    <ul class="nav_list list-reset">
+                        <li class="nav_item"><a href="#about-me" class="nav_link">about me</a></li>
+                        <li class="nav_item"><a href="#contacts" class="nav_link">contacts</a></li>
+                        <li class="nav_item"><a href="#skills" class="nav_link">skills</a></li>
+                        <li class="nav_item"><a href="#code-example" class="nav_link">code example</a></li>
+                        <li class="nav_item"><a href="#projects" class="nav_link">projects</a></li>
+                        <li class="nav_item"><a href="#education" class="nav_link">education</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section id="about-me" class="section about-me">
+                <div class="about-me_content">
+                    <img class="about-me_img" src="./assets/img/my_photo.jpg" alt="my photo" width="300">
+                    <h1 class="about-me_title">Vladislav Skorodumov</h1>
+                </div>
+            </section>
+            <section id="contacts" class="section contacts">
+                <div class="contacts_content">
+                    <h2 class="contacts_title section-title">My contacts</h2>
+                    <ul class="contacts_list list-reset">
+                        <li class="contacts_item">
+                            <a href="mailto:4js.vlad@mail.ru" class="contacts_link">4js.vlad@mail.ru</a>
+                        </li>
+                        <li class="contacts_item">
+                            <a href="tel:+79814300089" class="contacts_link">+7&nbsp;(981)-430-00-89</a>
+                        </li>
+                        <li class="contacts_item">
+                            <a href="https://t.me/Merry_Milkman" class="contacts_link">@Merry_Milkman</a>
+                        </li>
+                        <li class="contacts_item">
+                            <a href="https://github.com/MoLoKoeD" class="contacts_link">MoLoKoeD</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="skills" class="section skills">
+                <div class="skills_content">
+                    <h2 class="skills_title section-title">My skills</h2>
+                    <ul class="skills_list list-reset">
+                        <li class="skills_item"><span class="skills_item-uppercase">HTML&nbsp;</span>&mdash; basic level</li>
+                        <li class="skills_item"><span class="skills_item-uppercase">CSS&nbsp;</span>&mdash; basic level</li>
+                        <li class="skills_item"><span class="skills_item-uppercase">JS&nbsp;</span>&mdash; basic level</li>
+                        <li class="skills_item"><span class="skills_item-uppercase">GIT&nbsp;</span>&mdash; basic level</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="code-example" class="section code-example">
+                <div class="code-example_content">
+                    <h2 class="code-example_title section-title">My&nbsp;code example</h2>
+                    <p class="code-example_descr">This is&nbsp;my&nbsp;js&nbsp;for the calculator app</p>
+                    <div class="code-example_wrapper">
+                        <pre>
+                            <code>
+const resultElement = document.getElementById(&rsquo;result&rsquo;)
+const input1 = document.getElementById(&rsquo;input1&prime;)
+const input2 = document.getElementById(&rsquo;input2&prime;)
+const submitBtn = document.getElementById(&rsquo;submit&rsquo;)
+const submitPlus = document.getElementById(&rsquo;plus&rsquo;)
+const submitMinus = document.getElementById(&rsquo;minus&rsquo;)
+let action = &rsquo;+&rsquo;
+
+submitPlus.onclick = () =&gt; action = &rsquo;+&rsquo;
+
+submitMinus.onclick = () =&gt; action = &rsquo;-&rsquo;
+
+function printResult(result) {
+(result &lt; 0) ? resultElement.style.color = &rsquo;red&rsquo; : resultElement.style.color = &rsquo;green&rsquo;
+resultElement.textContent = result
+}
+
+function computeNumbersWithAction(inp1, inp2, actionSymbol) {
+const sumPlus = Number(inp1.value)
+const sumMinus = Number(inp2.value)
+return (actionSymbol == &rsquo;+&rsquo;) ? sumPlus + sumMinus : sumPlus&nbsp;&mdash; sumMinus
+}
+
+submitBtn.onclick = function () {
+const result = computeNumbersWithAction(input1, input2, action)
+printResult(result)
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="section projects">
+                <div class="projects_content">
+                    <h2 class="projects_title section-title">My projects</h2>
+                    <ol class="projects_list list-reset">
+                        <li class="projects_item">
+                            <a href="https://github.com/MoLoKoeD/yandex.T3" class="projects_link">Adaptive website with its own looping and automatic slider. With a&nbsp;carousel from the library. Using a&nbsp;grid.</a>
+                        </li>
+                        <li class="projects_item">
+                            <a href="https://molokoed.github.io/Stube-site/" class="projects_link">Adaptive stub site with form validation and submission (not to&nbsp;spam, but to&nbsp;work mail)</a>
+                        </li>
+                        <li class="projects_item">
+                            <a href="https://molokoed.github.io/grids/" class="projects_link">A&nbsp;landing page using Bootstrap, a&nbsp;burger menu, adaptive and cross-browser, with accessibility and animations.</a>
+                        </li>
+                        <li class="projects_item">
+                            <a href="https://molokoed.github.io/euclid/" class="projects_link">A&nbsp;landing page with the connection of&nbsp;third-party libraries, with tabs, accordion and slider.</a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section id="education" class="section education">
+                <div class="education_content">
+                    <h2 class="education_title section-title">My education</h2>
+                    <ul class="education_list list-reset">
+                        <li class="education_item">a&nbsp;bit of&nbsp;a&nbsp;course with &laquo;html academy&raquo;</li>
+                        <li class="education_item">a&nbsp;little more course time with &laquo;skillbox&raquo;</li>
+                        <li class="education_item">my&nbsp;English is&nbsp;at&nbsp;A2&nbsp;level, I&rsquo;m aiming for&nbsp;B1</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_content">
+                <ul class="footer_list list-reset">
+                    <li class="footer_item">
+                        <a href="https://github.com/MoLoKoeD" class="footer_link">
+                            <img src="./assets/img/git.svg.png" alt="my github" width="50">
+                        </a>
+                    </li>
+                    <li class="footer_item">&copy;&nbsp;2025&nbsp;CV#3</li>
+                    <li class="footer_item">
+                        <a href="https://rs.school/courses/javascript-ru" class="footer_link">
+                            <img src="./assets/img/rs-school-logo.svg" alt="rs-school-logo" width="100">
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </footer>
 </body>
 </html>
