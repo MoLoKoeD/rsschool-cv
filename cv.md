@@ -16,3 +16,24 @@ I’m 26 y.o., currently working with emails and small landing pages. Motivated 
 ### Strengths:
 - patience
 - single-mindedness
+
+## Skills
++ HTML
++ CSS (Bootstrap, SASS/SCSS, BEM)
++ JavaScript (Fundamentals, ES6+, DOM)
++ Git/GitHub
+
+## Code Examples
+```javascript
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+return distanceToPump/mpg <= fuelLeft
+};
+```
+
+## Education
+* Bachelor in Electrical and Mechanical Engineering (2021)
+* Rolling Scopes School, JavaScript/Front-End (2025 – ongoing)
+
+## Languages
+* Russian - native speaker.
+* English - A2 (B1 in process…)
